@@ -1,0 +1,17 @@
+name: mqttsrv
+version: 0.1
+summary: An mqtt server that listens locally to 11883
+description: mqtt server that listens to port 11883 locally
+confinement: devmode  # use "strict" to enforce system access only via declared interfaces
+grade: devel # use "stable" to assert the snap quality
+
+apps:
+    mqttsrv:
+        command: bin/mqttsrv
+        daemon: simple 
+        plugs: [network-bind, network]
+
+parts:
+    mqttsrv:
+        plugin: go
+        source: src/mqttsrv
