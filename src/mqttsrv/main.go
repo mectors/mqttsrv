@@ -8,7 +8,7 @@ import (
 	"github.com/jeffallen/mqtt"
 )
 
-var addr = flag.String("addr", "localhost:11883", "listen address of broker")
+var addr = flag.String("addr", "localhost:1883", "listen address of broker")
 
 func main() {
 	flag.Parse()
